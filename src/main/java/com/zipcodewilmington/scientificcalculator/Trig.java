@@ -10,7 +10,7 @@ public class Trig {
      * @param input the angle
      * @return the sine of the angle
      */
-    public static double Sine(double input) {
+    public static double sine(double input) {
         if (mode.equals("Radians")) {
             return Math.sin(input);
         } else {
@@ -23,7 +23,7 @@ public class Trig {
      * @param input the angle
      * @return the cosine of the angle
      */
-    public static double Cosine(int input) {
+    public static double cosine(double input) {
         if (mode.equals("Radians")) {
             return Math.cos(input);
         } else {
@@ -36,7 +36,7 @@ public class Trig {
      * @param input the angle
      * @return the tangent of the angle
      */
-    public static double Tangent(double input) {
+    public static double tangent(double input) {
         if (mode.equals("Radians")) {
             return Math.tan(input);
         } else {
@@ -49,7 +49,7 @@ public class Trig {
      * @param input the number to calculate with
      * @return the angle whose sine is the input
      */
-    public static double ArcSine(double input) {
+    public static double arcSine(double input) {
         if (mode.equals("Radians")) {
             return Math.asin(input);
         } else {
@@ -62,7 +62,7 @@ public class Trig {
      * @param input the number to calculate with
      * @return the angle whose cosine is the input
      */
-    public static double ArcCosine(double input) {
+    public static double arcCosine(double input) {
         if (mode.equals("Radians")) {
             return Math.acos(input);
         } else {
@@ -75,7 +75,7 @@ public class Trig {
      * @param input the number to calculate with
      * @return the angle whose tangent is the input
      */
-    public static double ArcTangent(double input) {
+    public static double arcTangent(double input) {
         if (mode.equals("Radians")) {
             return Math.atan(input);
         } else {
