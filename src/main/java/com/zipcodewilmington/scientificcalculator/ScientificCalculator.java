@@ -55,7 +55,7 @@ public class ScientificCalculator {
         }
     }
 
-    public void squared(double numto){
+    public void squared(double numtosquared){
         if(!isError){
             displayValue = Math.pow(displayValue, 2);
         }
