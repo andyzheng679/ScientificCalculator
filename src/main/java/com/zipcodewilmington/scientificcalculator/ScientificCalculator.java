@@ -55,22 +55,45 @@ public class ScientificCalculator {
         }
     }
 
-    public void squared(double numtosquared){
+    public void squared(double numtosquare){
         if(!isError){
             displayValue = Math.pow(displayValue, 2);
         }
     }
 
-    public void sqrt(double num){
+    public void sqrt(double sqrtNum){
         if(!isError){
-            if(num < 0){
+            if(sqrtNum < 0){
                 isError = true;
                 displayValue = 0;
                 errorMessage();
             }else{
-                displayValue = Math.sqrt(num);
+                displayValue = Math.sqrt(sqrtNum);
             }
         }
     }
+
+    public void exponentiation(double exponent){
+        if(!isError){
+            displayValue =Math.pow(displayValue, exponent);
+        }
+    }
+
+    public void inverse(double num){
+        if(!isError){
+            if(num == 0){
+                isError = true;
+                displayValue = 0;
+                errorMessage();
+            }else {
+                displayValue = 1 / num;
+            }
+        }
+    }
+
+    public void invertSign(double numtoInvert){
+        displayValue = -numtoInvert;
+    }
+
 
 }
