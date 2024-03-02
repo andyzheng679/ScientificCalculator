@@ -4,7 +4,7 @@ import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
 @Suite
-@SelectClasses({TestCommonLog.class, TestNaturalLog.class, TestInverseCommonLog.class})
+@SelectClasses({TestCommonLog.class, TestNaturalLog.class, TestInverseCommonLog.class, TestInverseNaturalLog.class})
 public class TestLogarithmSuite {
 
 }
