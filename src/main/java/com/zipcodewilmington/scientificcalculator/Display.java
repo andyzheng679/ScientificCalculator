@@ -7,17 +7,17 @@ import java.sql.SQLOutput;
 public class Display {
     private static String mode = "Decimal";
         public void DisplayMode() {
-            switch (mode) {
-                case "Binary":
+            switch (mode.toLowerCase()) {
+                case "binary":
                     mode = "Octal";
                     break;
-                case "Octal":
+                case "octal":
                     mode = "Decimal";
                     break;
-                case "Decimal":
+                case "decimal":
                     mode = "Hexadecimal";
                     break;
-                case "Hexadecimal":
+                case "hexadecimal":
                     mode = "Binary";
                     break;
                 default:
@@ -25,24 +25,27 @@ public class Display {
                     break;
             }
         }
-        public void DisplayMode(String inMode) {
-            switch (inMode) {
-                case "Binary":
+        public void displayMode(String inMode) {
+            switch (inMode.toLowerCase()) {
+                case "binary":
                    mode = "Binary";
                     break;
-                case "Octal":
+                case "octal":
                     mode = "Octal";
                     break;
-                case "Decimal":
+                case "decimal":
                     mode ="Decimal";
                     break;
-                case "Hexadecimal":
+                case "hexadecimal":
                     mode = "Hexadecimal";
                     break;
                 default:
                     Console.println("Select a mode selected!");
                     break;
             }
+        }
+    public String getMode() {
+        return mode;
         }
     }
 

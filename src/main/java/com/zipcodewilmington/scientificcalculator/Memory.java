@@ -2,14 +2,18 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class Memory {
     double memory = 0;
-        public double GetMemory() {
+
+    public Memory(Double memory){
+        this.memory = memory;
+    }
+        public double getMemory() {
             return memory;
         }
-        public void SetMemory(double memory) {
+        public void setMemory(double memory) {
             this.memory = memory;
         }
-        public void ClearMemory() {
+        public void clearMemory() {
             this.memory = 0;
         }
-
 }
+
