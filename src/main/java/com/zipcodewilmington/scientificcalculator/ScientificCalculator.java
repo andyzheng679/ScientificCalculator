@@ -5,21 +5,24 @@ public class ScientificCalculator {
     private boolean isError = false;   //default value is false
 
     public ScientificCalculator(double displayValue){   //constructor
+
         this.displayValue = displayValue;
+
     }
 
     public double getDisplayValue(){    //getting current display value
-        return displayValue;
+
+        return this.displayValue;
     }
 
     public void clearDisplayValue(){    //setting display value back to 0 and error to false "clearing it"
-        displayValue = 0;
-        isError = false;
+        this.displayValue = 0;
+        this.isError = false;
     }
 
     public void changeDisplay(double newDisplayValue){ //setting the display to a num
-        if(!isError){
-            displayValue = newDisplayValue;
+        if(!this.isError){
+            this.displayValue = newDisplayValue;
         }
     }
 
@@ -28,71 +31,72 @@ public class ScientificCalculator {
     }
 
     public void addition(double numtoAdd){
-        if(!isError){
-            displayValue += numtoAdd;
+        if(!this.isError){
+            this.displayValue += numtoAdd;
         }
     }
 
     public void subtraction(double numtoSub){
-        if(!isError){
-            displayValue -= numtoSub;
+        if(!this.isError){
+            this.displayValue -= numtoSub;
         }
     }
 
     public void multiplication(double numtoMulti){
-        if(!isError){
-            displayValue *= numtoMulti;
+        if(!this.isError){
+            this.displayValue *= numtoMulti;
         }
     }
 
     public void division(double numtoDiv){
         if(numtoDiv == 0){           //if input is 0, then there is an error, set value to 0 and display error msg
-            isError = true;
-            displayValue = 0;
+            this.isError = true;
+            this.displayValue = 0;
             errorMessage();
-        }else if(!isError){
-            displayValue /= numtoDiv;
+        }else if(!this.isError){
+            this.displayValue /= numtoDiv;
         }
     }
 
-    public void squared(double numtosquare){
-        if(!isError){
-            displayValue = Math.pow(displayValue, 2);
+    public void squared(){
+        if(!this.isError){
+            this.displayValue = Math.pow(this.displayValue, 2);
         }
     }
 
-    public void sqrt(double sqrtNum){
-        if(!isError){
-            if(sqrtNum < 0){
-                isError = true;
-                displayValue = 0;
+    public void sqrt(){
+        if(!this.isError){
+            if(this.displayValue < 0){
+                this.isError = true;
+                this.displayValue = 0;
                 errorMessage();
             }else{
-                displayValue = Math.sqrt(sqrtNum);
+                this.displayValue = Math.sqrt(this.displayValue);
             }
         }
     }
 
     public void exponentiation(double exponent){
-        if(!isError){
-            displayValue =Math.pow(displayValue, exponent);
+        if(!this.isError){
+            this.displayValue =Math.pow(this.displayValue, exponent);
         }
     }
 
-    public void inverse(double num){
-        if(!isError){
-            if(num == 0){
-                isError = true;
-                displayValue = 0;
+    public void inverse(){
+        if(!this.isError){
+            if(this.displayValue == 0){
+                this.isError = true;
+                this.displayValue = 0;
                 errorMessage();
             }else {
-                displayValue = 1 / num;
+                this.displayValue = 1 / this.displayValue;
             }
         }
     }
 
-    public void invertSign(double numtoInvert){
-        displayValue = -numtoInvert;
+    public void invertSign(){
+
+        this.displayValue = -this.displayValue;
     }
 
 
