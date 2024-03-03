@@ -5,7 +5,7 @@ public class ScientificCalculator {
     private boolean isError = false;   //default value is false
 
     public ScientificCalculator(double displayValue){   //constructor
-        this.displayValue = 0;
+        this.displayValue = displayValue;
     }
 
     public double getDisplayValue(){    //getting current display value
