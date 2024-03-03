@@ -7,6 +7,7 @@ public class ScientificCalculator {
     public ScientificCalculator(double displayValue){   //constructor
 
         this.displayValue = displayValue;
+
     }
 
     public double getDisplayValue(){    //getting current display value
@@ -57,20 +58,20 @@ public class ScientificCalculator {
         }
     }
 
-    public void squared(double numtosquare){
+    public void squared(){
         if(!this.isError){
             this.displayValue = Math.pow(this.displayValue, 2);
         }
     }
 
-    public void sqrt(double sqrtNum){
+    public void sqrt(){
         if(!this.isError){
-            if(sqrtNum < 0){
+            if(this.displayValue < 0){
                 this.isError = true;
                 this.displayValue = 0;
                 errorMessage();
             }else{
-                this.displayValue = Math.sqrt(sqrtNum);
+                this.displayValue = Math.sqrt(this.displayValue);
             }
         }
     }
@@ -81,20 +82,21 @@ public class ScientificCalculator {
         }
     }
 
-    public void inverse(double num){
+    public void inverse(){
         if(!this.isError){
-            if(num == 0){
+            if(this.displayValue == 0){
                 this.isError = true;
                 this.displayValue = 0;
                 errorMessage();
             }else {
-                this.displayValue = 1 / num;
+                this.displayValue = 1 / this.displayValue;
             }
         }
     }
 
-    public void invertSign(double numtoInvert){
-        this.displayValue = -numtoInvert;
+    public void invertSign(){
+
+        this.displayValue = -this.displayValue;
     }
 
 
