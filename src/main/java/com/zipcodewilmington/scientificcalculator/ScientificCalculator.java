@@ -31,11 +31,13 @@ public class ScientificCalculator {
     public void errorMessage(){
 
         System.out.println("ERROR");
-        Scanner scanner = new Scanner(System.in);
+        this.displayValue = 0;
+        this.isError = false;
+        /*
         System.out.println("Enter new display value: ");
         double input = scanner.nextDouble();
         this.displayValue = input;
-
+        */
     }
 
     public void addition(double numtoAdd){
