@@ -36,7 +36,10 @@ public class MainApplication {
             }
 
             switch(operationInput.toLowerCase()){
-                //..
+                case "+":
+                    System.out.println("Enter a number to add to the display number: ");
+                    calculator.addition(scanner.nextDouble());
+                    //break;
 
 
             }
