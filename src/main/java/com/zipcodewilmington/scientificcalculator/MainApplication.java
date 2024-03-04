@@ -1,35 +1,25 @@
 package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
-import java.awt.*;
-import java.lang.management.MemoryManagerMXBean;
 
 /**
  * Created by leon on 2/9/18.
  */
 public class MainApplication {
     public static void main(String[] args) {
-
-        /*
-        Console.println("Welcome to my calculator!");
-        String s = Console.getStringInput("Enter a string");
-        Integer i = Console.getIntegerInput("Enter an integer");
-        Double d = Console.getDoubleInput("Enter a double.");
-
-        Console.println("The user input %s as a string", s);
-        Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as a double", d);
-         */
-
         Scanner scanner = new Scanner(System.in);
         ScientificCalculator calculator = new ScientificCalculator(0);
-        System.out.println("Here is the current display value: " + calculator.getDisplayValue());
-        System.out.println("Enter new display value: ");
+        Memory calcMem = new Memory(0.0);
+
+        Console.println("Here is the current display value: " + calculator.getDisplayValue());
+        Console.println("Enter new display value: ");
         double input = scanner.nextDouble();
         calculator.changeDisplay(input);
 
         while(true){
+
             System.out.println("New display value: " + calculator.getDisplayValue());
-            System.out.println("Pick operation: +, -, *, /, squared, sqrt, exponentiation, inverse, invertsign, clear, or exit: ");
+            System.out.println("Pick operation: +, -, *, /, !, squared, sqrt, exponentiation, inverse, invertsign,  clear, exit, ");
+            System.out.println("m+, mcl, mrc, sin, cos, tan, asin, acos, atan, log, ln, log-1, or e^x: ")
 
             String operationInput = scanner.next();
 
@@ -82,16 +72,73 @@ public class MainApplication {
                     System.out.println("This will now inverse the sign of the display value: ");
                     calculator.invertSign();
                     break;
+                
+                case "m+":
+                    double addMem = calcMem.getMemory();
+                    addMem += calculator.getDisplayValue();
+                    calcMem.setMemory(addMem);
+                    calculator.changeDisplay(addMem);
+                
+                case "mcl":
+                    calcMem.clearMemory();
+                    break;
+                
+                case "mrc":
+                    calculator.changeDisplay(calcMem.getMemory());
+                    break;
+                
+                case "sin":
+                    calculator.changeDisplay(Trig.sine(calculator.getDisplayValue()));
+                    break;
+                
+                case "cos":
+                    calculator.changeDisplay(Trig.cosine(calculator.getDisplayValue()));
+                    break;
+                
+                case "tan":
+                    calculator.changeDisplay(Trig.tangent(calculator.getDisplayValue()));
+                    break;
+                
+                case "asin":
+                    calculator.changeDisplay(Trig.arcSine(calculator.getDisplayValue()));
+                    break;
+                
+                case "acos":
+                    calculator.changeDisplay(Trig.arcCosine(calculator.getDisplayValue()));
+                    break;
+                
+                case "atan":
+                    calculator.changeDisplay(Trig.arcTangent(calculator.getDisplayValue()));
+                    break;
+                
+                case "log":
+                    calculator.changeDisplay(Logarithm.commonLog(calculator.getDisplayValue()));
+                    break;
+                
+                case "ln":
+                    calculator.changeDisplay(Logarithm.naturalLog(calculator.getDisplayValue()));
+                    break;
+                
+                case "log-1":
+                    calculator.changeDisplay(Logarithm.inverseCommonLog(calculator.getDisplayValue()));
+                    break;
+                
+                case "e^x":
+                    calculator.changeDisplay(Logarithm.inverseNaturalLog(calculator.getDisplayValue()));
+                    break;
 
                 case "clear":
                     System.out.println("Will now clear display value");
                     calculator.clearDisplayValue();
                     break;
+                
+                case "!":
+                    long fact = Factorial.factorial((int) calculator.getDisplayValue());
+                    calculator.changeDisplay((double) fact);
+                    break;
 
                 default:
                     System.out.println("NOT AN OPERATION");
-
-
             }
 
         }
