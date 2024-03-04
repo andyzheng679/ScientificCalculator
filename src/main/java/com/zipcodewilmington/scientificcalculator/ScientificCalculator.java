@@ -1,5 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.util.Scanner;
+
 public class ScientificCalculator {
     private double displayValue = 0;    //default value is 0
     private boolean isError = false;   //default value is false
@@ -27,7 +29,13 @@ public class ScientificCalculator {
     }
 
     public void errorMessage(){
+
         System.out.println("ERROR");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter new display value: ");
+        double input = scanner.nextDouble();
+        this.displayValue = input;
+        
     }
 
     public void addition(double numtoAdd){
