@@ -1,14 +1,9 @@
 package com.zipcodewilmington.scientific_calculator;
 
 import com.zipcodewilmington.scientificcalculator.Logarithm;
-import org.junit.jupiter.api.Test;
-import org.junit.platform.suite.api.SelectClasses;
-import org.junit.platform.suite.api.Suite;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-//@Suite
-//@SelectClasses({TestCommonLog.class, TestNaturalLog.class, TestInverseCommonLog.class, TestInverseNaturalLog.class})
 public class TestLogarithmSuite {
     @Test
     public void testCommonLogNumber() {
