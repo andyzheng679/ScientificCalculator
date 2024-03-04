@@ -1,18 +1,11 @@
 package com.zipcodewilmington.scientific_calculator;
 
-import org.junit.experimental.runners.Enclosed;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.junit.platform.suite.api.SelectClasses;
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-import org.junit.runners.Suite.*;
-
+import org.junit.Test;
 import static com.zipcodewilmington.scientificcalculator.Trig.*;
 import static org.junit.Assert.assertEquals;
-//@SuiteClasses({TestSine.class, TestCosine.class, TestTangent.class, TestArcSine.class, TestArcCosine.class, TestArcTangent.class})
+
 public class TestTrigSuite {
-    @org.junit.jupiter.api.Test
+    @Test
     public void testTangentZero() {
         double input = 0;
         double expected = 0;
@@ -20,7 +13,7 @@ public class TestTrigSuite {
         assertEquals(expected, actual, 0);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void testTangentNaN() {
         double input = Double.NaN;
         double expected = Double.NaN;
@@ -28,7 +21,7 @@ public class TestTrigSuite {
         assertEquals(expected, actual, 0);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void testTangentInf() {
         double input = Double.POSITIVE_INFINITY;
         double expected = Double.NaN;
@@ -49,7 +42,7 @@ public class TestTrigSuite {
         double input = Math.PI / 2.0;
         double expected = 1.0;
         double actual = sine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -57,7 +50,7 @@ public class TestTrigSuite {
         double input = (3 * Math.PI) / 2.0;
         double expected = -1.0;
         double actual = sine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -65,7 +58,7 @@ public class TestTrigSuite {
         double input = Double.NaN;
         double expected = Double.NaN;
         double actual = sine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -73,7 +66,7 @@ public class TestTrigSuite {
         double input = Double.POSITIVE_INFINITY;
         double expected = Double.NaN;
         double actual = sine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -81,7 +74,7 @@ public class TestTrigSuite {
         double input = 0;
         double expected = 0;
         double actual = sine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -89,7 +82,7 @@ public class TestTrigSuite {
         double input = Double.NEGATIVE_INFINITY;
         double expected = Double.NaN;
         double actual = sine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -97,7 +90,7 @@ public class TestTrigSuite {
         double input = -0;
         double expected = -0;
         double actual = sine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -105,7 +98,7 @@ public class TestTrigSuite {
         double input = Math.PI;
         double expected = -1;
         double actual = cosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -113,7 +106,7 @@ public class TestTrigSuite {
         double input = Double.NaN;
         double expected = Double.NaN;
         double actual = cosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -121,7 +114,7 @@ public class TestTrigSuite {
         double input = Double.POSITIVE_INFINITY;
         double expected = Double.NaN;
         double actual = cosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -129,7 +122,7 @@ public class TestTrigSuite {
         double input = 0;
         double expected = 1;
         double actual = cosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -137,7 +130,7 @@ public class TestTrigSuite {
         double input = Double.NEGATIVE_INFINITY;
         double expected = Double.NaN;
         double actual = cosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -145,7 +138,7 @@ public class TestTrigSuite {
         double input = 0;
         double expected = Math.PI / 2;
         double actual = arcCosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -153,7 +146,7 @@ public class TestTrigSuite {
         double input = -1;
         double expected = Math.PI;
         double actual = arcCosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -161,7 +154,7 @@ public class TestTrigSuite {
         double input = 1;
         double expected = 0;
         double actual = arcCosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -169,7 +162,7 @@ public class TestTrigSuite {
         double input = Double.NaN;
         double expected = Double.NaN;
         double actual = arcCosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -177,7 +170,7 @@ public class TestTrigSuite {
         double input = 2;
         double expected = Double.NaN;
         double actual = arcCosine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -185,7 +178,7 @@ public class TestTrigSuite {
         double input = 0;
         double expected = 0;
         double actual = arcSine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -193,7 +186,7 @@ public class TestTrigSuite {
         double input = 1;
         double expected = Math.PI / 2;
         double actual = arcSine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -201,7 +194,7 @@ public class TestTrigSuite {
         double input = -1;
         double expected = -Math.PI / 2;
         double actual = arcSine(input);
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -209,7 +202,7 @@ public class TestTrigSuite {
         double input = 2;
         double expected = Double.NaN;
         double actual = arcSine(input);
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -217,7 +210,7 @@ public class TestTrigSuite {
         double input = Double.NaN;
         double expected = Double.NaN;
         double actual = arcSine(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -225,7 +218,7 @@ public class TestTrigSuite {
         double input = 0;
         double expected = 0;
         double actual = arcTangent(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -233,7 +226,7 @@ public class TestTrigSuite {
         double input = Double.POSITIVE_INFINITY;
         double expected = Math.PI / 2;
         double actual = arcTangent(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -241,7 +234,7 @@ public class TestTrigSuite {
         double input = Double.NEGATIVE_INFINITY;
         double expected = -Math.PI / 2;
         double actual = arcTangent(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -249,6 +242,6 @@ public class TestTrigSuite {
         double input = Double.NaN;
         double expected = Double.NaN;
         double actual = arcTangent(input);
-        Assertions.assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 }
