@@ -4,6 +4,6 @@ import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
 @Suite
-@SelectClasses({TestSine.class, TestCosine.class})
+@SelectClasses({TestSine.class, TestCosine.class, TestTangent.class})
 public class TestTrigSuite {
 }
