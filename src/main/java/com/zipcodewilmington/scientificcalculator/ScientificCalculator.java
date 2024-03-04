@@ -35,7 +35,7 @@ public class ScientificCalculator {
         System.out.println("Enter new display value: ");
         double input = scanner.nextDouble();
         this.displayValue = input;
-        
+
     }
 
     public void addition(double numtoAdd){

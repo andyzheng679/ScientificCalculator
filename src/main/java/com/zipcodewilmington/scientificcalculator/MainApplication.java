@@ -19,7 +19,7 @@ public class MainApplication {
 
             System.out.println("New display value: " + calculator.getDisplayValue());
             System.out.println("Pick operation: +, -, *, /, !, squared, sqrt, exponentiation, inverse, invertsign,  clear, exit, ");
-            System.out.println("m+, mcl, mrc, sin, cos, tan, asin, acos, atan, log, ln, log-1, or e^x: ")
+            System.out.println("m+, mcl, mrc, sin, cos, tan, asin, acos, atan, log, ln, log-1, or e^x: ");
 
             String operationInput = scanner.next();
 
