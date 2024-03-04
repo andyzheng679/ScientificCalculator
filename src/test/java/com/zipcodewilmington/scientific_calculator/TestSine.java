@@ -5,7 +5,7 @@ import static com.zipcodewilmington.scientificcalculator.Trig.sine;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
-@DisplayName("Testing Trig.sine()")
+//@DisplayName("Testing Trig.sine()")
 public class TestSine {
     @Test
     public void testSineHalfPi() {

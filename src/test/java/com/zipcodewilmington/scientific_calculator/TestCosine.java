@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static com.zipcodewilmington.scientificcalculator.Trig.cosine;
 
-@DisplayName("Testing Trig.cosine()")
+//@DisplayName("Testing Trig.cosine()")
 public class TestCosine {
     @Test
     public void testCosinePi() {
