@@ -12,6 +12,7 @@ public class Console {
     }
 
     public static void println(String output, Object... args) {
+
         print(output + "\n", args);
     }
 
@@ -23,10 +24,26 @@ public class Console {
     }
 
     public static Integer getIntegerInput(String prompt) {
-        return null;
+
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        while(!scanner.hasNextInt()){
+            scanner.next();
+            println("Error, enter an int: ");
+        }
+        int userInput = scanner.nextInt();
+        return userInput;
     }
 
     public static Double getDoubleInput(String prompt) {
-        return null;
+
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        while(!scanner.hasNextDouble()){
+            scanner.next();
+            println("Error, enter an double: ");
+        }
+        double userInput = scanner.nextDouble();
+        return userInput;
     }
 }
