@@ -1,7 +1,5 @@
 package com.zipcodewilmington.scientificcalculator;
 
-import java.util.Objects;
-
 public class Trig {
     private static String mode = "Radians";
 
